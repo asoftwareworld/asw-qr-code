@@ -7,7 +7,7 @@
  */
 
 import { Component } from '@angular/core';
-import { AswQrcodeErrorCorrectionLevel } from '@asoftwareworld/qr-code';
+import { AswQrcodeErrorCorrectionLevel } from '@asoftwareworld/qrcode';
 
 @Component({
     selector: 'asw-root',

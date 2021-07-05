@@ -15,7 +15,7 @@
         "moduleResolution": "node",
         "importHelpers": true,
         "paths": {
-            "@asoftwareworld/qr-code": [
+            "@asoftwareworld/qrcode": [
                 "dist/qr-code/qr-code",
                 "dist/qr-code"
             ]

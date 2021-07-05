@@ -1,5 +1,5 @@
 {
-    "name": "@asoftwareworld/qr-code",
+    "name": "@asoftwareworld/qrcode",
     "version": "1.0.0",
     "peerDependencies": {
         "@angular/common": "^11.2.14",

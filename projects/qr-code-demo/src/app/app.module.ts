@@ -8,7 +8,7 @@
 
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AswQrCodeModule } from '@asoftwareworld/qr-code';
+import { AswQrCodeModule } from '@asoftwareworld/qrcode';
 
 import { AppComponent } from './app.component';
 
