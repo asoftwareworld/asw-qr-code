@@ -15,7 +15,7 @@ import * as QRCode from 'qrcode';
     selector: 'asw-qr-code',
     template: `<canvas #aswQrCode class="aclass"></canvas >`
 })
-export class QrCodeComponent implements AfterViewInit {
+export class AswQrCodeComponent implements AfterViewInit {
 
     @ViewChild('aswQrCode') aswQrCode!: ElementRef<HTMLCanvasElement>;
 

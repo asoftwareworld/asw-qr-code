@@ -6,17 +6,19 @@
  * found in the LICENSE file
  */
 
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { QrCodeComponent } from './qr-code.component';
+import { AswQrCodeComponent } from './qr-code.component';
 
 @NgModule({
     declarations: [
-        QrCodeComponent
+        AswQrCodeComponent
     ],
     imports: [
+        CommonModule
     ],
     exports: [
-        QrCodeComponent
+        AswQrCodeComponent
     ]
 })
 export class AswQrCodeModule { }

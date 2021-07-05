@@ -1,6 +1,14 @@
-import { NgModule } from '@angular/core';
+/**
+ * @license
+ * Copyright ASW (A Software World) All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file
+ */
+
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AswQrCodeModule } from 'projects/qr-code/src/public-api';
+import { AswQrCodeModule } from '@asoftwareworld/qr-code';
 
 import { AppComponent } from './app.component';
 
@@ -13,6 +21,7 @@ import { AppComponent } from './app.component';
         AswQrCodeModule
     ],
     providers: [],
-    bootstrap: [AppComponent]
+    bootstrap: [AppComponent],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
