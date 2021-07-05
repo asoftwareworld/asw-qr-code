@@ -6,7 +6,7 @@
 
 `ASW QR Code` library for generating QR Code for Angular projects.
 
-## [Live Demo](https://asoftwareworld.github.io/ASW-Form-Builder/#/)
+## [Live Demo](https://asoftwareworld.github.io/asw-qr-code/)
 
 ### Install ASW Form Builder
 Install `QR Code` to set up in the project by running the following command:
