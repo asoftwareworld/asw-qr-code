@@ -2,7 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/%40asoftwareworld%2Fform-builder.svg)](https://www.npmjs.com/package/@asoftwareworld/qrcode)
 [![Build status](https://circleci.com/gh/asoftwareworld/asw-qr-code.svg?style=svg)](https://circleci.com/gh/asoftwareworld/asw-qr-code)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/asoftwareworld/asw-qr-code/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/asoftwareworld/asw-qr-code/blob/main/LICENSE)
 
 `ASW QR Code` library for generating QR Code for Angular projects.
 

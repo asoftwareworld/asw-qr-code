@@ -8,21 +8,21 @@
 
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { QrCodeComponent } from './qr-code.component';
+import { AswQrCodeComponent } from './qr-code.component';
 
-describe('QrCodeComponent', () => {
-    let component: QrCodeComponent;
-    let fixture: ComponentFixture<QrCodeComponent>;
+describe('AswQrCodeComponent', () => {
+    let component: AswQrCodeComponent;
+    let fixture: ComponentFixture<AswQrCodeComponent>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            declarations: [QrCodeComponent]
+            declarations: [AswQrCodeComponent]
         })
             .compileComponents();
     });
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(QrCodeComponent);
+        fixture = TestBed.createComponent(AswQrCodeComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });
