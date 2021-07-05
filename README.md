@@ -6,11 +6,7 @@
 
 `ASW QR Code` library for generating QR Code for Angular projects.
 
-`Form Builder` is compatible with the latest version of Angular and Angular Material. Only a few clicks can create an attractive web form and provide a JSON Schema to render all controls.
-
 ## [Live Demo](https://asoftwareworld.github.io/ASW-Form-Builder/#/)
-
-## Installation
 
 ### Install ASW Form Builder
 Install `QR Code` to set up in the project by running the following command:
@@ -60,14 +56,16 @@ export class AppComponent {
 }
 ```
 
-## List of Controls available
-| controls        | description                                                                                                     |
+## List of values
+| Values        | Description                                                                                                     |
 | --------------- | --------------------------------------------------------------------------------------------------------------- |
-| value          | Headings are defined with the `<h1> to <h6>` tags. Used as a title of the post, template and resume, etc.       |
-| size    | The autocomplete is a normal text input enhanced by a panel of suggested relevant options as the user types.    |
-| errorCorrectionLevel         | Enable native inputs to be used within a form field. The styles such as the underline, floating label.          |
-| centerImageSrc       | Enable native inputs to be used within a form field. The styles such as the underline, floating label.          |
-| centerImageSize      | The datepicker allows users to enter a date either through text input, or by choosing a date from the calendar. |                                                                             |
+| value (required)          | The value to encode in the QR code i.e. a URL, Text, etc.       |
+| size (optional)   | Automatic size based on the value provided in pixels    |
+| errorCorrectionLevel (optional)         | Error correction capability allows to successfully scan a QR Code even if the symbol is dirty or damaged. Four levels are available to choose according to the operating environment. **Default value:** `MEDIUM` and Valid values: `LOW`, `MEDIUM`, `QUARTILE`, `HIGH` [See more](https://www.npmjs.com/package/qrcode) details|
+| centerImageSrc (optional)       | A center image src property to load and render  image in the center of the QR code.          |
+| centerImageSize (optional)     | Automatic size in pixels to render the center image. |       
+| colorDark (optional)    | use for dark color |
+| colorLight (optional)    | use for light color |
 
 
 ## Browser Support
