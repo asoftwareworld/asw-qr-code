@@ -11,7 +11,7 @@ import { AswQrcodeVersion } from './enum/qr-code-type';
 export const QrCodeConstant = {
     value: 'https://asoftwareworld.com/',
     centerImageSize: 40,
-    version: '' as AswQrcodeVersion,
+    version: undefined as AswQrcodeVersion,
     colorDark: '#000',
     colorLight: '#FFF'
 };

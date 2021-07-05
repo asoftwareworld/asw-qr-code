@@ -28,9 +28,8 @@ export class QrCodeComponent implements AfterViewInit {
     @Input() centerImageSize: string | number = QrCodeConstant.centerImageSize;
     @Input() colorDark = QrCodeConstant.colorDark;
     @Input() colorLight = QrCodeConstant.colorLight;
-    @Input() version?: number;
+    @Input() version = QrCodeConstant.version;
     private centerImage?: HTMLImageElement;
-
 
     constructor() { }
 
@@ -106,11 +105,9 @@ export class QrCodeComponent implements AfterViewInit {
         if (!value) {
             return defaultValue;
         }
-
         if (typeof value === 'string') {
             return parseInt(value, 10);
         }
-
         return value;
     }
 
