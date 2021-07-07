@@ -9,7 +9,7 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AswQrCodeModule } from '@asoftwareworld/qrcode';
-
+import {MatCardModule} from '@angular/material/card';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -18,7 +18,8 @@ import { AppComponent } from './app.component';
     ],
     imports: [
         BrowserModule,
-        AswQrCodeModule
+        AswQrCodeModule,
+        MatCardModule
     ],
     providers: [],
     bootstrap: [AppComponent],

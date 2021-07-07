@@ -62,7 +62,6 @@
                         "main": "projects/qr-code-demo/src/main.ts",
                         "polyfills": "projects/qr-code-demo/src/polyfills.ts",
                         "tsConfig": "projects/qr-code-demo/tsconfig.app.json",
-                        "aot": true,
                         "assets": [
                             "projects/qr-code-demo/src/favicon.ico",
                             "projects/qr-code-demo/src/assets"
@@ -70,7 +69,13 @@
                         "styles": [
                             "projects/qr-code-demo/src/styles.scss"
                         ],
-                        "scripts": []
+                        "scripts": [],
+                        "vendorChunk": true,
+                        "extractLicenses": false,
+                        "buildOptimizer": false,
+                        "sourceMap": true,
+                        "optimization": false,
+                        "namedChunks": true
                     },
                     "configurations": {
                         "production": {
@@ -100,7 +105,8 @@
                                 }
                             ]
                         }
-                    }
+                    },
+                    "defaultConfiguration": ""
                 },
                 "serve": {
                     "builder": "@angular-devkit/build-angular:dev-server",
