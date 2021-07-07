@@ -1,6 +1,5 @@
 # ASW QR Code
-
-[![npm version](https://badge.fury.io/js/%40asoftwareworld%2Fform-builder.svg)](https://www.npmjs.com/package/@asoftwareworld/qrcode)
+[![npm version](https://badge.fury.io/js/%40asoftwareworld%2Fqrcode.svg)](https://www.npmjs.com/package/@asoftwareworld/qrcode)
 [![Build status](https://circleci.com/gh/asoftwareworld/asw-qr-code.svg?style=svg)](https://circleci.com/gh/asoftwareworld/asw-qr-code)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/asoftwareworld/asw-qr-code/blob/main/LICENSE)
 
