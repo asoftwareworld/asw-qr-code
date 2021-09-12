@@ -20,5 +20,5 @@ export class AppComponent {
     size = 180;
     errorCorrectionLevel = AswQrcodeErrorCorrectionLevel.LOW;
     centerImageSrc = 'https://angular.io/assets/images/logos/angular/angular.png';
-    centerImageSize = 180;
+    centerImageSize = 50;
 }

@@ -23,9 +23,7 @@ export class AswQrCodeComponent implements AfterViewInit {
     @Input() size?: number;
     @Input() errorCorrectionLevel: AswQrcodeErrorCorrectionLevel = AswQrcodeErrorCorrectionLevel.MEDIUM;
     @Input() centerImageSrc?: string;
-    @Input() centerImageWidth?: number | string;
-    @Input() centerImageHeight?: number | string;
-    @Input() centerImageSize: string | number = QrCodeConstant.centerImageSize;
+    @Input() centerImageSize?: string | number;
     @Input() colorDark = QrCodeConstant.colorDark;
     @Input() colorLight = QrCodeConstant.colorLight;
     @Input() version = QrCodeConstant.version;
@@ -57,8 +55,8 @@ export class AswQrCodeComponent implements AfterViewInit {
 
     private setCenterImage(canvas: any, context: any): void {
         const centerImageSrc = this.centerImageSrc;
-        const centerImageWidth = this.getDefaultValue(this.centerImageWidth, QrCodeConstant.centerImageSize);
-        const centerImageHeight = this.getDefaultValue(this.centerImageHeight, QrCodeConstant.centerImageSize);
+        const centerImageWidth = this.getDefaultValue(this.centerImageSize, QrCodeConstant.centerImageSize);
+        const centerImageHeight = this.getDefaultValue(this.centerImageSize, QrCodeConstant.centerImageSize);
         if (centerImageSrc && context) {
 
             if (!this.centerImage) {
