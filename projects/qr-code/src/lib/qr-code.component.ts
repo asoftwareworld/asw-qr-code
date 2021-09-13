@@ -6,7 +6,7 @@
  * found in the LICENSE file
  */
 
-import { Component, ElementRef, Input, AfterViewInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, AfterViewInit, ViewChild, OnChanges } from '@angular/core';
 import { AswQrcodeErrorCorrectionLevel } from './enum/qr-code-type';
 import { QrCodeConstant } from './qr-code-constant';
 import * as QRCode from 'qrcode';
@@ -15,7 +15,7 @@ import * as QRCode from 'qrcode';
     selector: 'asw-qr-code',
     template: `<canvas #aswQrCode class="aclass"></canvas >`
 })
-export class AswQrCodeComponent implements AfterViewInit {
+export class AswQrCodeComponent implements OnChanges, AfterViewInit {
 
     @ViewChild('aswQrCode') aswQrCode!: ElementRef<HTMLCanvasElement>;
 
@@ -28,10 +28,19 @@ export class AswQrCodeComponent implements AfterViewInit {
     @Input() colorLight = QrCodeConstant.colorLight;
     @Input() version = QrCodeConstant.version;
     private centerImage?: HTMLImageElement;
+    viewInitialized = false;
 
     constructor() { }
 
+    ngOnChanges(): void {
+        if (!this.viewInitialized) {
+            return;
+        }
+        this.createQrCode();
+    }
+
     ngAfterViewInit(): void {
+        this.viewInitialized = true;
         this.createQrCode();
     }
 

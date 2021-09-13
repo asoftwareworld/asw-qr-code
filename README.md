@@ -7,7 +7,7 @@
 
 ## [Live Demo](https://asoftwareworld.github.io/asw-qr-code/)
 
-### Install ASW Form Builder
+### Install ASW QR Code
 Install `QR Code` to set up in the project by running the following command:
 ```html
 npm install @asoftwareworld/qrcode
