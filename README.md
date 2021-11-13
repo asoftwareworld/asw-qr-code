@@ -55,8 +55,8 @@ export class AppComponent {
 }
 ```
 
-## List of values
-| Values        | Description                                                                                                     |
+## List of Input parameters
+| Input parameters        | Description                                                                                                     |
 | --------------- | --------------------------------------------------------------------------------------------------------------- |
 | value (required)          | The value to encode in the QR code i.e. a URL, Text, etc.       |
 | size (optional)   | Automatic size based on the value provided in pixels    |
