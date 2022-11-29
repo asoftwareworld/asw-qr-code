@@ -5,7 +5,7 @@
 
 `ASW QR Code` library for generating QR Code for Angular projects.
 
-## [Live Demo](https://asoftwareworld.github.io/asw-qr-code/)
+## [Live Demo](https://asoftwareworld.github.io/qr-code)
 
 ### Install ASW QR Code
 Install `QR Code` to set up in the project by running the following command:
@@ -55,8 +55,8 @@ export class AppComponent {
 }
 ```
 
-## List of values
-| Values        | Description                                                                                                     |
+## List of Input parameters
+| Input parameters        | Description                                                                                                     |
 | --------------- | --------------------------------------------------------------------------------------------------------------- |
 | value (required)          | The value to encode in the QR code i.e. a URL, Text, etc.       |
 | size (optional)   | Automatic size based on the value provided in pixels    |
