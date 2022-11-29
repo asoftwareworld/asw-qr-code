@@ -1,15 +1,15 @@
 {
     "name": "@asoftwareworld/qrcode",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "author": "Anish Sharma",
     "license": "MIT",
     "dependencies": {        
-        "qrcode": "^1.4.4",
-        "tslib": "^2.0.0"
+        "qrcode": "^1.5.1",
+        "tslib": "^2.3.0"
     },
     "peerDependencies": {
-        "@angular/common": ">=8.0.0",
-        "@angular/core": ">=8.0.0"        
+        "@angular/common": "^15.0.0",
+        "@angular/core": "^15.0.0"        
     },    
     "description": "ASW QR Code library for generating QR Code for Angular projects.",
     "scripts": {
