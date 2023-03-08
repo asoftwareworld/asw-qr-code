@@ -22,11 +22,11 @@
                 "dist/qr-code"
             ]
         },
-        "target": "ES2022",
-        "module": "ES2022",
+        "target": "es5",
+        "module": "es2020",
         "useDefineForClassFields": false,
         "lib": [
-            "ES2022",
+            "es5",
             "dom"
         ]
     },
