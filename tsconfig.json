@@ -16,6 +16,7 @@
         "experimentalDecorators": true,
         "moduleResolution": "node",
         "importHelpers": true,
+        "allowSyntheticDefaultImports": true,
         "paths": {
             "@asoftwareworld/qrcode": [
                 "dist/qr-code/qr-code",
