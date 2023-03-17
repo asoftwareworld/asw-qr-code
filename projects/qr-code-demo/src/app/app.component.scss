@@ -1,0 +1,77 @@
+.qrcodeImage {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+  }
+  
+  .downloadButton {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .left {
+    display: flex;
+    flex: 1;
+    justify-content: left;
+  }
+  
+  .center {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+  }
+  
+  .right {
+    display: flex;
+    flex: 1;
+    justify-content: right;
+  }
+  
+  .demoBorder {
+    border: 10px solid red;
+  }
+  
+  .demoBorderRadius {
+    border: dashed;
+    border-width: 2px 4px;
+    border-radius: 40px;
+    overflow: hidden;
+  }
+  
+  mat-slider {
+    width: 300px;
+  }
+  .asw-tab-icon {
+    margin-right: 8px;
+  }
+  .example-label-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.example-result-card .example-value-label {
+    font-weight: 600;
+}
+
+.asw-default-image {
+    display: flex;
+    justify-content: center;
+}
+.asw-default-image img {
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.asw-mini-fab {
+    height: 24px !important;
+    width: 24px !important;
+    border-radius: 4px !important;
+    padding-top: 10px;
+}
+.asw-sticky-top {
+    top: 30% !important;
+}
+.asw-width-99 {
+    width: 99% !important;
+}

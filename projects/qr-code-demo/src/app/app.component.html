@@ -1,8 +1,333 @@
-<mat-card>
-    <asw-qr-code [value]="value" 
-        [size]="size"
-        [errorCorrectionLevel]="errorCorrectionLevel"
-        [centerImageSrc]="centerImageSrc"
-        [centerImageSize]="centerImageSize">
-    </asw-qr-code>
-</mat-card>
+<mat-toolbar color="primary" id="toolbar-header">
+    <a mat-button href="https://asoftwareworld.com/#/product/qr-code" aria-label="Example icon-button with menu icon">
+        <mat-icon>qr_code_2</mat-icon>
+        asw-qr-code
+    </a>
+    <span class="toolbar-header-spacer"></span>
+    <a mat-button href="https://github.com/asoftwareworld/asw-qr-code" aria-label="Example icon-button with heart icon">
+        <mat-icon>code</mat-icon>
+        Github
+    </a>
+    <a mat-button href="https://www.npmjs.com/package/@asoftwareworld/qrcode"
+        aria-label="Example icon-button with heart icon">
+        <mat-icon>file_download</mat-icon>
+        npm 2.0.0
+    </a>
+
+    <iframe src="https://ghbtns.com/github-btn.html?user=asoftwareworld&repo=asw-qr-code&type=star&count=true" frameborder="0"
+        scrolling="0" width="110" height="20" title="GitHub"></iframe>
+</mat-toolbar>
+
+<div class="page-header">
+    <h1>ASW QR Code Generator</h1>
+</div>
+
+<div id="npmInstall">
+    <h4>Installation</h4>
+    <pre>npm install asw-qr-code --save</pre>
+</div>
+
+<div id="wrapper">
+    <div class="asw-row">
+        <div class="asw-col-md-5">
+            <div class="asw-sticky-top">
+                <mat-card>
+                    <mat-card-header>
+                        <mat-card-title>QR Code Preview</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <div class="qrcodeImage">
+                            <asw-qr-code #parent [qrData]="option.data" [width]="option.width" [height]="option.height"
+                                [outerMargin]="option.outerMargin" [type]="option.type" [allowEmptyString]="true"
+                                [logo]="option.logo"
+                                [density]="option.density" [backgroundColor]="option.backgroundColor"
+                                [logoStyle]="option.logoStyle" [middleShape]="option.middleShape"
+                                [cornerInnerShape]="option.cornerInnerShape" [cornerOuterShape]="option.cornerOuterShape">
+                            </asw-qr-code>
+                        </div>
+                        <div class="downloadButton">
+                            <button mat-icon-button [matMenuTriggerFor]="menu" matTooltip="Download QR Code">
+                                <mat-icon>download</mat-icon>
+                            </button>
+                            <mat-menu #menu="matMenu">
+                                <button mat-menu-item (click)="parent.download({extension: 'svg', name: 'asw'})">
+                                    <span>SVG</span>
+                                </button>
+                                <button mat-menu-item (click)="parent.download({extension: 'png', name: 'asw'})">
+                                    <span>PNG</span>
+                                </button>
+                                <button mat-menu-item (click)="parent.download({extension: 'jpeg', name: 'asw'})">
+                                    <span>JPEG</span>
+                                </button>
+                                <button mat-menu-item (click)="parent.download({extension: 'webp', name: 'asw'})">
+                                    <span>WEBP</span>
+                                </button>
+                            </mat-menu>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+        <div class="asw-col-md-7">
+            <mat-accordion class="example-headers-align" multi>
+                <mat-expansion-panel expanded="true">
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Format
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <form [formGroup]="aswQrCodeSettingForm">
+                        <div class="asw-row">
+                            <div class="asw-col-md-12">
+                                <mat-form-field appearance="outline" class="asw-width-100">
+                                    <mat-label>Data</mat-label>
+                                    <input matInput type="text" name="data" placeholder="QR code data"
+                                        matTooltip="Enter QR code data" formControlName="data">
+                                </mat-form-field>
+                            </div>
+                            <div class="asw-col-md-6">
+                                <mat-form-field appearance="outline" class="asw-width-100">
+                                    <mat-label>Width</mat-label>
+                                    <input matInput type="number" name="width" min="100" max="400" placeholder="QR code width"
+                                        matTooltip="Enter QR code width" formControlName="width" required>
+                                </mat-form-field>
+                            </div>
+                            <div class="asw-col-md-6">
+                                <mat-form-field appearance="outline" class="asw-width-100">
+                                    <mat-label>Height</mat-label>
+                                    <input matInput type="number" name="height" min="100" max="400"
+                                        placeholder="QR code height" matTooltip="Enter QR code height" formControlName="height"
+                                        required>
+                                </mat-form-field>
+                            </div>
+                            <div class="asw-col-md-6">
+                                <mat-form-field appearance="outline" class="asw-width-100">
+                                    <mat-label>Draw type</mat-label>
+                                    <mat-select formControlName="type" matTooltip="Select QR code draw type">
+                                        <mat-option *ngFor="let drawTpe of drawTpes" [value]="drawTpe.value">
+                                            {{drawTpe.label}}
+                                        </mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                            <div class="asw-col-md-6">
+                                <mat-form-field appearance="outline" class="asw-width-100">
+                                    <mat-label>Outer margin</mat-label>
+                                    <input matInput type="number" name="margin" min="0" max="30" placeholder="QR code margin"
+                                        matTooltip="Enter QR code margin" formControlName="outerMargin" required>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </form>
+                </mat-expansion-panel>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Density
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <form [formGroup]="aswDensityForm">
+                        <div class="asw-row">
+                            <div class="asw-col-md-12">
+                                <div class="example-label-container">
+                                    <label id="example-name-label" class="example-name-label">Type number</label>
+                                    <label class="example-value-label">{{aswDensityForm.value.typeNumber}}</label>
+                                </div>
+                                <mat-slider min="0" max="40" step="1" discrete class="asw-width-99">
+                                    <input matSliderThumb formControlName="typeNumber">
+                                </mat-slider>
+                            </div>
+                            <div class="asw-col-md-6">
+                                <mat-form-field appearance="outline" class="asw-width-100">
+                                    <mat-label>Error correction level</mat-label>
+                                    <mat-select formControlName="errorCorrectionLevel"
+                                        matTooltip="Select error correction level">
+                                        <mat-option *ngFor="let ecl of errorCorrectionLevels" [value]="ecl">
+                                            {{ecl}}
+                                        </mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                            <div class="asw-col-md-6">
+                                <mat-form-field appearance="outline" class="asw-width-100">
+                                    <mat-label>Mode</mat-label>
+                                    <mat-select formControlName="mode" matTooltip="Select qr code mode">
+                                        <mat-option *ngFor="let m of modes" [value]="m">
+                                            {{m}}
+                                        </mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </form>
+                </mat-expansion-panel>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Style
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div class="asw-row">
+                        <div class="asw-col-md-4">
+                            <form [formGroup]="aswMiddleShapeForm">
+                                <mat-form-field appearance="outline" class="asw-width-100">
+                                    <mat-label>Middle shape</mat-label>
+                                    <mat-select formControlName="type" matTooltip="Select middle shape">
+                                        <mat-option *ngFor="let dt of middleShapeTypes" [value]="dt.value">
+                                            {{dt.label}}
+                                        </mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </form>
+                        </div>
+                        <div class="asw-col-md-4">
+                            <form [formGroup]="aswCornerInnerShapeForm">
+                                <mat-form-field appearance="outline" class="asw-width-100">
+                                    <mat-label>Corner inner shape</mat-label>
+                                    <mat-select formControlName="type" matTooltip="Select corner inner shape">
+                                        <mat-option *ngFor="let dt of cornerInnerShapeTypes" [value]="dt.value">
+                                            {{dt.label}}
+                                        </mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </form>
+                        </div>
+                        <div class="asw-col-md-4">
+                            <form [formGroup]="aswCornerOuterShapeForm">
+                                <mat-form-field appearance="outline" class="asw-width-100">
+                                    <mat-label>Corner outer shape</mat-label>
+                                    <mat-select formControlName="type" matTooltip="Select corner outer shape">
+                                        <mat-option *ngFor="let dt of cornerOuterShapeTypes" [value]="dt.value">
+                                            {{dt.label}}
+                                        </mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </form>
+                        </div>
+                    </div>
+                </mat-expansion-panel>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Color
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div class="asw-row">
+                        <div class="asw-col-md-3">
+                            <button mat-button [cpPosition]="'top'" [cpPositionOffset]="'50%'" [cpPositionRelativeToArrow]="true"
+                            [(colorPicker)]="backgroundColor" [cpOutputFormat]="'hex'"
+                            (colorPickerChange)="backgroundColorChange()">
+                                <button class="asw-mini-fab" 
+                                    mat-mini-fab [style.color]="'#ffffff'" 
+                                    [style.background]="backgroundColor">
+                                </button>
+                                Background
+                            </button>
+                        </div>
+                        <div class="asw-col-md-3">
+                            <button mat-button
+                                [cpPosition]="'top'" [cpPositionOffset]="'50%'" [cpPositionRelativeToArrow]="true"
+                                [(colorPicker)]="middleShapeColor" [cpOutputFormat]="'hex'"
+                                (colorPickerChange)="middleShapeColorChange()">
+                                <button class="asw-mini-fab" mat-mini-fab 
+                                    [style.color]="'#ffffff'" 
+                                    [style.background]="middleShapeColor">
+                                </button>
+                                Middle shapes
+                            </button>
+                        </div>
+                        <div class="asw-col-md-3">
+                            <button mat-button
+                                [cpPosition]="'top'" [cpPositionOffset]="'50%'" [cpPositionRelativeToArrow]="true"
+                                [(colorPicker)]="cornerInnerShapeColor" [cpOutputFormat]="'hex'"
+                                (colorPickerChange)="cornerInnerShapeColorChange()">
+                                <button class="asw-mini-fab" mat-mini-fab 
+                                    [style.color]="'#ffffff'" 
+                                    [style.background]="cornerInnerShapeColor">
+                                </button>
+                                Corner inner
+                            </button>
+                        </div>
+                        <div class="asw-col-md-3">
+                            <button mat-button
+                                [cpPosition]="'top'" [cpPositionOffset]="'50%'" [cpPositionRelativeToArrow]="true"
+                                [(colorPicker)]="cornerOuterShapeColor" [cpOutputFormat]="'hex'"
+                                (colorPickerChange)="cornerOuterShapeColorChange()">
+                                <button class="asw-mini-fab" mat-mini-fab 
+                                    [style.color]="'#ffffff'" 
+                                    [style.background]="cornerOuterShapeColor">
+                                </button>
+                                Corner outer
+                            </button>
+                        </div>
+                    </div>
+                </mat-expansion-panel>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Logo
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <form [formGroup]="aswQrLogoStyleForm">
+                        <div class="asw-row">
+                            <div class="asw-col-md-12">
+                                <h4 class="asw-text-center">Default images</h4>
+                                <div class="asw-default-image">
+                                    <img class="asw-img-thumbnail" src="./assets/asw.png" width="40" height="40" (click)="insertImage('./assets/asw.png')">
+                                    <img class="asw-img-thumbnail" src="./assets/youtube.svg" width="40" height="40" (click)="insertImage('./assets/youtube.svg')">
+                                    <img class="asw-img-thumbnail" src="./assets/facebook.svg" width="40" height="40" (click)="insertImage('./assets/facebook.svg')">
+                                    <img class="asw-img-thumbnail" src="./assets/instagram.svg" width="40" height="40" (click)="insertImage('./assets/instagram.svg')">
+                                    <img class="asw-img-thumbnail" src="./assets/whatsapp.svg" width="40" height="40" (click)="insertImage('./assets/whatsapp.svg')">
+                                    <img class="asw-img-thumbnail" src="./assets/twitter.svg" width="40" height="40" (click)="insertImage('./assets/twitter.svg')">
+                                    <img class="asw-img-thumbnail" src="./assets/snapchat.svg" width="40" height="40" (click)="insertImage('./assets/snapchat.svg')">
+                                    <img class="asw-img-thumbnail" src="./assets/mc.svg" width="40" height="40" (click)="insertImage('./assets/mc.svg')">
+                                    <img class="asw-img-thumbnail" src="./assets/shopping_cart.svg" width="40" height="40" (click)="insertImage('./assets/shopping_cart.svg')">
+                                    <img class="asw-img-thumbnail" src="./assets/play.svg" width="40" height="40" (click)="insertImage('./assets/play.svg')">
+                                    <img class="asw-img-thumbnail" src="./assets/launch.svg" width="40" height="40" (click)="insertImage('./assets/launch.svg')">
+                                    <img class="asw-img-thumbnail" src="./assets/error.svg" width="40" height="40" (click)="insertImage('./assets/error.svg')">
+                                    <img class="asw-img-thumbnail" src="./assets/chat.svg" width="40" height="40" (click)="insertImage('./assets/chat.svg')">
+                                </div>
+                            </div>
+                            <div class="asw-col-md-2">
+                                <button mat-icon-button matTooltip="Remove current logo" (click)="insertImage('')">
+                                    <mat-icon>close</mat-icon>
+                                </button>
+                            </div>
+                            <ng-container *ngIf="option.logo">
+                                <div class="asw-col-md-12">
+                                    <mat-slide-toggle color="primary" formControlName="hideBackgroundCircle">Hide Background
+                                        Dots</mat-slide-toggle>
+                                </div>
+                                <div class="asw-col-md-12">
+                                    <div class="example-label-container">
+                                        <label id="example-name-label" class="example-name-label">Logo size</label>
+                                        <label class="example-value-label">{{aswQrLogoStyleForm.value.logoSize}}</label>
+                                    </div>
+                                    <mat-slider min="0" max="1" step="0.1" discrete class="asw-width-99">
+                                        <input matSliderThumb formControlName="logoSize">
+                                    </mat-slider>
+                                </div>
+                                <div class="asw-col-md-12">
+                                    <div class="example-label-container">
+                                        <label id="example-name-label" class="example-name-label">Logo margin</label>
+                                        <label class="example-value-label">{{aswQrLogoStyleForm.value.logoMargin}}</label>
+                                    </div>
+                                    <mat-slider min="0" max="10" step="1" discrete class="asw-width-99">
+                                        <input matSliderThumb formControlName="logoMargin">
+                                    </mat-slider>
+                                </div>
+                            </ng-container>
+                        </div>
+                    </form>
+                </mat-expansion-panel>
+            </mat-accordion>
+        </div>
+    </div>
+</div>
+
+<footer id="footer" class="asw-text-center">
+    <p class="copyright clearfix text-muted m-0">
+        Copyright &copy; {{currentDate | date: 'yyyy'}} <a href="https://asoftwareworld.com">ASW (A Software World)</a>
+        <span class="d-none d-sm-inline-block">, All rights reserved.</span>
+    </p>
+</footer>
