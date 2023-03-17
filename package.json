@@ -1,6 +1,6 @@
 {
     "name": "asw-qr-code",
-    "version": "1.2.1",
+    "version": "2.0.0",
     "author": "Anish Sharma",
     "license": "MIT",
     "scripts": {
@@ -23,7 +23,8 @@
         "@angular/platform-browser-dynamic": "^15.0.4",
         "@angular/router": "^15.0.4",
         "@types/qrcode": "^1.5.0",
-        "qrcode": "^1.5.1",
+        "ngx-color-picker": "^14.0.0",
+        "qrcode-generator": "^1.4.4",
         "rxjs": "~7.5.0",
         "tslib": "^2.3.0",
         "zone.js": "~0.12.0"
