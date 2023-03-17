@@ -1,13 +1,46 @@
-# ASW QR Code
-[![npm version](https://badge.fury.io/js/%40asoftwareworld%2Fqrcode.svg)](https://www.npmjs.com/package/@asoftwareworld/qrcode)
-[![Build status](https://circleci.com/gh/asoftwareworld/asw-qr-code.svg?style=svg)](https://circleci.com/gh/asoftwareworld/asw-qr-code)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/asoftwareworld/asw-qr-code/blob/main/LICENSE)
+<h1 align="center">ASW QR Code - customizable design and logos.</h1>
 
-`ASW QR Code` library is a customizable QR Code generator with options to add personalized design and logos, designed specifically for Angular projects.
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/69723522/225834944-8ea6f27d-d02a-4903-91c3-bc97f9209251.svg" alt="asw-logo" width="310px" height="100px"/>
+  <br>
+  <i>ASW QR Code library is a customizable QR Code generator with options to add personalized design and logos, designed specifically for
+    <br> Angular projects.</i>
+  <br>
+</p>
 
-## [Live Demo](https://asoftwareworld.github.io/qr-code)
+<p align="center">
+  <a href="https://asoftwareworld.com/#/product/qr-code"><strong>ASW QR code demo</strong></a>
+  <br>
+</p>
 
-[![Watch the video](https://user-images.githubusercontent.com/69723522/225821757-788969af-922f-442b-ba02-8eb4c8366b24.jpg)](https://youtu.be/2F-Q32hsl6A)
+<p align="center">
+  <a href="CONTRIBUTING.md">Contributing Guidelines</a>
+  ·
+  <a href="https://github.com/asoftwareworld/asw-qr-code/issues">Submit an Issue</a>
+  ·
+  <a href="https://asoftwareworld.com/#/product/qr-code">Blog</a>
+  <br>
+  <br>
+</p>
+
+<p align="center">
+  <a href="https://www.npmjs.com/package/@asoftwareworld/qrcode">
+    <img src="https://badge.fury.io/js/%40asoftwareworld%2Fqrcode.svg" alt="CI status" />
+  </a>&nbsp;
+  <a href="https://circleci.com/gh/asoftwareworld/ASW-Form-Builder">
+    <img src="https://circleci.com/gh/asoftwareworld/asw-qr-code.svg?style=svg" alt="Asw QR Code on npm" />
+  </a>&nbsp;
+  <a href="https://github.com/asoftwareworld/asw-qr-code/blob/main/LICENSE">
+    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="Discord conversation" />
+  </a>
+</p>
+
+<hr>
+<p align="center">
+<a href="https://youtu.be/2F-Q32hsl6A" target="_blank">
+ <img src="https://user-images.githubusercontent.com/69723522/225821757-788969af-922f-442b-ba02-8eb4c8366b24.jpg" alt="Watch the video" width="560" height="315" border="10" />
+</a>
+</p>
 
 ### Install ASW QR Code
 Install `QR Code` to set up in the project by running the following command:
