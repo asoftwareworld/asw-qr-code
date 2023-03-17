@@ -140,7 +140,7 @@ export default class AswQrCodeMaker {
     async download(downloadOptions?: Partial<DownloadOptions> | string): Promise<void> {
         if (!this._qr) throw 'QR code is empty';
         let extension = 'png' as Extension;
-        let name = 'qr';
+        let name = 'asw-qr';
 
         //TODO remove deprecated code in the v2
         if (typeof downloadOptions === 'string') {
