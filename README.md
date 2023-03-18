@@ -173,7 +173,7 @@ export class AppComponent implements OnInit {
 | --------------- | ----------------------|----------------------------------------------------------------------------------------- |
 | width: number (optional) | 200         | width refers to the horizontal measurement of the generated QR code, typically measured in pixels.       |
 | height: number (optional) | 200   | height refers to the vertical measurement of the generated QR code, typically measured in pixels.   |
-| type: string ('canvas' | 'svg') (optional) | canvas        | The type of element that will be rendered for QR code generation can be either a Canvas or SVG element.|
+| type: string (`canvas` `svg`) (optional) | canvas        | The type of element that will be rendered for QR code generation can be either a Canvas or SVG element.|
 | allowEmptyString: boolean (optional) | false       | Allow qrdata to be an empty string.         |
 | qrData: string (optional)|     | The data will be encoded to the QR code |       
 | outerMargin: number (optional)| 0    | Outer margin around a Canvas or SVG element. |
