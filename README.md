@@ -3,13 +3,13 @@
 <p align="center">
   <img src="https://user-images.githubusercontent.com/69723522/225834944-8ea6f27d-d02a-4903-91c3-bc97f9209251.svg" alt="asw-logo" width="310px" height="100px"/>
   <br>
-  <i>ASW QR Code library is a customizable QR Code generator with options to add personalized design and logos, designed specifically for
-    <br> Angular projects.</i>
+  <em>ASW QR Code library is a customizable QR Code generator with options to add personalized design and logos, designed specifically for
+    <strong>Angular</strong> projects.</em>
   <br>
 </p>
 
 <p align="center">
-  <a href="https://asoftwareworld.com/#/product/qr-code"><strong>ASW QR code demo</strong></a>
+  <a href="https://asoftwareworld.com/#/product/qr-code"><strong>Angular QR code demo</strong></a>
   <br>
 </p>
 
