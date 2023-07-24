@@ -62,7 +62,7 @@ export class AswQrCodeComponent implements OnChanges, AfterViewInit {
     private config: any
 
     viewInitialized = true;
-    @Output() qrCodeURL = new EventEmitter<SafeUrl>();
+    @Output() qrCodeURL = new EventEmitter<boolean>();
 
     constructor(@Inject(DOCUMENT) private document: Document, private sanitizer: DomSanitizer) { }
 
@@ -149,6 +149,7 @@ export class AswQrCodeComponent implements OnChanges, AfterViewInit {
                 const container: any = this.document.getElementById('aswQRCodeElement-' + this.uniqueId);
                 this.config.append(container);
             }
+            this.qrCodeURL.emit(true);
         } catch (e: any) {
             console.error('[asw-qr-code] Error generating QR Code:', e.message)
         }
